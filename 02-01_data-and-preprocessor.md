@@ -67,4 +67,10 @@ int x = 1
 * 기본형 : 정수형, 실수형, 문자형, 열거형(enum), 형 없음(void)
 * 확장형 : 배열형(array type), 함수형(function type), 포인터형(pointer type), 구조체형(structure type)
 
+## 열거형
+
+`enum`
+
+숫자 대신 단어를 사용
+
 
