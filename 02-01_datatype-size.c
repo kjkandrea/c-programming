@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <limits.h>
 
-void main() {
+void main()
+{
     char ch1 = CHAR_MIN;
     char ch2 = CHAR_MAX;
     short sh1 = SHRT_MIN;
