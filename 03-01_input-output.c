@@ -2,8 +2,8 @@
 
 int main()
 {
-    char leftName[8];
-    char rightName[8];
+    char leftName[16];
+    char rightName[16];
 
     printf("이름을 입력하세요: ");
     scanf("%s", leftName);
@@ -17,5 +17,5 @@ int main()
         "그래서 %s는 그의 곁에 있으면 기분이 좋고 편안했던 것이다.\n",
         rightName);
 
-        return 0;
+    return 0;
 };
