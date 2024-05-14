@@ -70,4 +70,48 @@ pt = &man;
 
 `(*pt).name` or `pt -> name`
 
+## 함수와 구조체
 
+## 구조체를 함수의 매개변수로 사용
+
+* 구조체 내용 전체가 복사되기 때문에 기억공간 낭비가 심함
+* => 구조체 포인터를 매개변수로 사용하여 보완 가능
+
+## 구조체 포인터를 함수의 매개변수로 사용
+
+```c
+#include <stdio.h>
+
+struct num
+{
+    int x;
+    int y;
+    int sum;
+    int mul;
+};
+
+int calc(struct num *);
+
+int main()
+{
+    struct num number1;
+    number1.x = 10;
+    number1.y = 20;
+    calc(&number1);
+
+    printf("x: %d\n", number1.x);
+    printf("y: %d\n", number1.y);
+    printf("sum: %d\n", number1.sum);
+    printf("mul: %d\n", number1.mul);
+
+    return 0;
+}
+
+int calc(struct num *number2)
+{
+    number2->sum = number2->x + number2->y;
+    number2->mul = number2->x * number2->y;
+
+    return 0;
+}
+```
