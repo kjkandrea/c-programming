@@ -34,3 +34,40 @@ my_car.maker;
 my_car.km;
 my_car.cost;
 ```
+
+## 구조체 배열
+
+```c
+struct person {
+    char name[8];
+    int age;
+    char sex;
+} X[3];
+```
+
+or
+
+```c
+struct person {
+    char name[8];
+    int age;
+    char sex;
+};
+
+struct person X[3];
+```
+
+## 구조체 포인터
+
+```c
+struct person man;
+struct person *pt;
+
+pt = &man;
+```
+
+멤버 참조
+
+`(*pt).name` or `pt -> name`
+
+
