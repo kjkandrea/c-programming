@@ -115,3 +115,34 @@ int calc(struct num *number2)
     return 0;
 }
 ```
+
+## typedef
+
+이미 존재하는 자료형에 새로운 이름을 붙이는 용도
+
+```c
+typedef unsigned int BYTE;
+BYTE val;
+```
+
+```c
+typedef struct {
+    char name[15];
+    int age;
+} Person;
+
+Person student1;
+```
+
+## 공용체 (union)
+
+* 동일한 기억장소에 여러 유형의 자료를 저장하기위해서 프로그래머가 선언한 자료형
+* 하나의 메모리 공간에 여러 타입의 값들을 할당하고자 존재함
+* 하지만 어떤 맴버가 사용중인지를 추적하는 방법을 따로 지원하지않고 직접 관리해야함...
+
+```c
+union salary {
+    int won;
+    long dollar;
+}
+```
